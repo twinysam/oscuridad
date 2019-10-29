@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Starter Template for Bootstrap 3.3.5</title>
+    <link rel="shortcut icon" href="witch_hat.ico">
+    <link href='https://fonts.googleapis.com/css?family=Anonymous+Pro|Playfair+Display:400,400italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="mipagina.css">
+
+    <!--[if IE]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div class="constant starter-template">
+        <div class="center">
+            <h1>Vuelve en:</h1>
+            <div id="bomb"></div>
+        </div>
+        
+    </div>
+    <footer>Dale F5 para seguir aterrorizandote.</footer>
+    <div class="box cup">
+        <div class="starter-template">
+            <span>Se acerca...</span>
+        </div>
+    </div>
+    <div class="box escape">
+        <div class="starter-template">
+            <span>No hay escapatoria.</span>
+        </div>
+    </div>
+    <div class="box witch">
+        <div class="starter-template">
+            <span>AHHHHHHHHHHHHHHH!!!</span>
+        </div>
+    </div>
+    <div class="box emperor">
+        <div class="starter-template">
+            <span>"CARGUEN SUS HORAS!"</span>
+        </div>
+    </div>
+    <div class="box palpatine">
+        <div class="starter-template">
+            <span>De repente Macri no suena tan terrible.</span>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="jquery.countdown.min.js"></script>
+
+    <script type="text/javascript">
+        $("#bomb").countdown("2015/12/01 09:30:00", function (event) {
+            $(this).text(
+                event.strftime('%D dias %H horas %M minutos'));
+
+        });
+
+        var elems = $(".box");
+        if (elems.length) {
+            var keep = Math.floor(Math.random() * elems.length);
+            for (var i = 0; i < elems.length; ++i) {
+                if (i !== keep) {
+                    $(elems[i]).hide();
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
